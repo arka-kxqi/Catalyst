@@ -1,0 +1,674 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #141416;
+}
+.logo{
+  width: 50px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 10px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #141416;
+  padding: 15px 60px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.30);
+  z-index: 1;
+}
+#navbar {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+#navbar li {
+  
+  list-style: none;
+  padding: 0px 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+#btn{
+  text-decoration: none;
+  font-size: 1.1rem;
+  //font-weight: 600;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+.plug {
+  padding-left: 20px;
+  
+}
+.social {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  padding-left: 650px;
+  justify-content: space-between;
+}
+.usecase{
+  color: #fff;
+}
+
+
+#navbar  li :hover{
+  color: #17cf97;
+}
+#navbar li:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color:#17cf97;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+
+}
+#mobile i{
+  color: #fff;
+}
+#mobile {
+  display: none;
+}
+@media screen and (max-width:769px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:flex-start;
+    position: fixed;
+    top: 72px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color:#141416;
+    box-shadow: 0 40px 60px rgba(0, 0, 0,0.30);
+    padding: 40px 0 0 10px;
+    transition:0.3s ease-in-out;
+
+  }
+  #navbar.active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #mobile {
+    display: block;
+  }
+  #mobile i {
+    font-size: 24px;
+    cursor: pointer;
+
+  }
+  
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #141416;
+  width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+
+  left: -5px;
+  
+  
+  
+}
+
+.dropdown-content li {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.dropdown-content li:hover {
+  background-color: #141416;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+// createProposal 
+
+body {
+ // background-color: #1e1e1e;
+  
+}
+
+.form-container {
+  background-color: #141416;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.start-campaign-btn {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.start-campaign-btn:hover {
+  background-color: #777;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group .form-field {
+  flex: 1;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 15px;
+  border: 1px solid #141416;
+  border-radius: 5px;
+  background-color: #141416;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #777;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: none;
+}
+
+.info-banner {
+  background-color: #73b57f;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info-banner p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.submit-btn {
+  background-color: #a676ba;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #8e44ad;
+}
+// create prop submit status
+/* styles.css */
+.success-message {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+.error-message {
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+}
+// home heading
+/* Homepage.css */
+
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background: linear-gradient(135deg, #141416, #141416); /* Gradient background */
+  animation: backgroundAnimation 10s ease infinite; /* Smooth background animation */
+}
+
+@keyframes backgroundAnimation {
+  0% { background: linear-gradient(135deg, #141416, #141416); }
+  50% { background: linear-gradient(135deg, #141416, #141416); }
+  100% { background: linear-gradient(135deg, #141416, #141416); }
+}
+
+.header {
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.title {
+  font-size: 3rem;
+  color: #141416; /* Dark grey for the title */
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: #10976f; /* Change color on hover */
+}
+
+.sub-description {
+  font-size: 1.5rem;
+  color: #141416; /* Lighter grey for the sub-description */
+  transition: color 0.3s ease;
+}
+
+.sub-description:hover {
+  color: #141416; /* Change color on hover */
+}
+// landing page content
+body {
+  
+  margin: 0;
+  padding: 0;
+  
+}
+
+.landing-page {
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+.header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.header p {
+  font-size: 1.2em;
+  margin: 10px 0 0;
+}
+
+
+
+.section {
+  margin: 40px 0;
+  padding: 20px;
+ 
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+}
+
+
+.section:hover {
+  transform: scale(1.02);
+}
+
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.section p, .section ul, .section ol {
+  text-align: left;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.section ul li:last-child {
+  border-bottom: none;
+}
+
+.section ol {
+  padding-left: 20px;
+  
+
+}
+
+.section ol li {
+  padding: 10px 0;
+}
+.why {
+color: #fff;
+}
+.why p {
+  padding-inline:40px;
+  padding-bottom: 5px;
+  
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card2 {
+  background: linear-gradient(to bottom, #28a745, white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(246, 248, 246, 0.1);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  
+}
+.card2 img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+
+.card {
+  background: linear-gradient( white);
+  border-radius: 10px;
+  //box-shadow: 0 4px 6px rgba(244, 243, 243, 0.1);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.join-us button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-us button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #141416;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .header p {
+    font-size: 1em;
+  }
+
+  .section h2 {
+    font-size: 1.5em;
+  }
+
+  .section p, .section ul, .section ol {
+    font-size: 1em;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
+.join {
+  color: #fff;
+}
+// proposalsList
+.proposals-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.proposals-container h1 {
+  
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.proposals-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.proposal-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 px 0px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  width: 280px;
+  height: 360px;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.proposal-card:hover {
+  transform: translateY(-10px);
+}
+
+.proposal-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.proposal-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.proposal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.proposal-content p {
+  margin: 5px 0;
+}
+
+.proposal-content strong {
+  color: #333;
+}
+
+
+// DonateProposal
+.proposal-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #141416;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-top: 20px;
+  
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.proposal-image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.proposal-meta {
+  margin-top: 20px;
+}
+
+.proposal-meta p {
+  margin: 0;
+}
+
+.proposal-story , .proposal-donators  {
+  margin-top: 25px;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  
+  background-color: #2c2c2e;
+  border-radius: 10px;
+}
+
+.proposal-donators ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.proposal-donators p {
+  color: #ffffff;
+  width: 100%;
+  
+
+  
+}
+
+.right-section {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+
+.proposal-funding {
+  background-color: #2c2c2e;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.proposal-funding p {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #b0b0b0;
+ 
+}
+
+.proposal-funding input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.fund-button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #62d9aa;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.fund-button:hover {
+  background-color: #3bcc92;
+}
